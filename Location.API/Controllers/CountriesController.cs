@@ -1,0 +1,14 @@
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace Location.API.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public class CountriesController : ControllerBase
+{
+    [HttpGet("GetAll")]
+    public IEnumerable<string> Get()
+    {
+        return new string[] { "Viet Nam", "China", "Russia" };
+    }
+}
